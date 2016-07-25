@@ -16,8 +16,12 @@ namespace Udemy_1
             number2 = 25;
         }
 
+
         static void Main(string[] args)
         {
+            MyClass ob; // declaration of an object
+
+
             int myNumber1 = 100;
             int myNumber2 = 200;
             // Why do I need to declare static in order to use in Main?!
@@ -35,6 +39,16 @@ namespace Udemy_1
 
 
             Console.ReadKey();
+
+            ob = new MyClass(); // class initialization
+            Console.WriteLine(ob.getStr());
+            Console.WriteLine("Setting a new string , press Enter!");
+            Console.ReadKey();
+            ob.setStr("A new String");
+            Console.WriteLine("New string is - '{0}'",ob.getStr());
+            Console.ReadKey();
+
+
         }
     }
 }
